@@ -1,0 +1,216 @@
+<html>
+<head>
+	<title>Dashboard-Page-SSCI</title>
+    <link rel="stylesheet" type="text/css" href="../cssReset/reset.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="dashboard2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<header>
+    <nav class="navbar navbar-light bg-white">
+        <form class="form-inline">
+             <a href="../dashboard/dashboard.html" type="submit" class="btn">Pedidos</a>
+              <a href="../dashboard2/dashboard2.html" type="submit" class="btn">Cardápio</a>
+            <button type="button" class="btn">Icon</button>
+        </form>
+      </nav>
+</header>
+
+<body>
+    <div class="container">                       
+            <!--Campo para Banco de Dados-->
+            <div class="d-flex justify-content-center">
+            <div class="boxbd">
+
+                <nav class="navbar">
+                <form class="form-inline">
+
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdowndata" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Categoria.
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdowndata">
+                          <a class="dropdown-item" href="#">Hoje</a>
+                          <a class="dropdown-item" href="#">Ultimo mês</a>
+                          <a class="dropdown-item" href="#">Ultima semana</a>
+                        </div>
+                      </div>                    
+                </form>
+
+                <!--Modal Cadastrar Categoria-->
+                
+                <button type="button" style="margin-left: 70%;" class="btn btn-primary" data-toggle="modal" data-target="#modalCategoria" data-whatever="@getbootstrap">Categoria +</button>
+                <div class="modal fade" id="modalCategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" style=" display: block;
+                        margin-left: 150px;
+                        margin-right: auto" id=exampleModalLabel>Cadastrar Categoria</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+            
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Nome">
+                          </div>
+            
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Valor">
+                 
+                          </div>
+                          <div class="form-group">
+                            <textarea class="form-control" id="message-text" placeholder="Descrição"></textarea>
+                          </div>
+            
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Fim Modal Cadastrar Categoria-->
+                
+                <!--Modal Cadastrar Produto-->
+              <!--  <button class="btn dropdown-toggle" type="button" id="dropdownproduto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                              
+                Produto+</button> 
+                Excluir Modal-->
+
+              <!--  <div class="dropdown-menu"  aria-labelledby="dropdownproduto"> -->
+                  <button class="btn" type="button" data-toggle="modal" data-target="#modalProduto" type="button">Produto</button>                                  
+              <!-- </div> -->
+                <div class="modal fade" id="modalProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" style=" display: block;
+                        margin-left: 150px;
+                        margin-right: auto" id=exampleModalLabel>Cadastrar Produto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+            
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Nome">
+                          </div>
+            
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="recipient-name"  style="width: 48%;" placeholder="Valor">
+            
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" style="margin-left: 50%; margin-top: -8%; width: 48%; text-align: left;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Categoria
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#"></a>
+                                  <a class="dropdown-item" href="#"></a>
+                                  <a class="dropdown-item" href="#"></a>
+                                </div>
+                              </div> 
+            
+                          </div>
+                          <div class="form-group">
+                            <textarea class="form-control" id="message-text" placeholder="Descrição"></textarea>
+                          </div>
+            
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                </nav>
+
+                <!--Inicio Tabelas-->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="table-responsive">
+                            <table class="table">
+                                    <thead class="thead">
+                                      <td>                                  
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Categoria</th>
+                                        <th scope="col">Valor</th>
+                                      </td>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td></td>
+                                        <th scope="row">#001</th>
+                                        <td>pizza                                         
+                                        </td>
+                                        <td>pizza</td>
+                                        <td>pizza
+                                          <!--ModalDefiniçõesdoItem-->
+
+                                          <button class="btn dropdown-toggle" style="margin-left: 60%;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                              
+                                          </button>
+                                          <!--Excluir Modal-->
+                                          <div class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
+                                            <button class="dropdown-item btn" type="button" data-toggle="modal" data-target="#modalExcluir" type="button">Excluir</button>                                  
+                                          </div> 
+                                          <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja excluir esse produto?</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  #PRODUTO??!!
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                                                  <button type="button" class="btn btn-warning">Excluir</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <!--ExcluirModalFim-->
+                                        </td>
+
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                        <th scope="row">#002</th>                                   
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                        <th scope="row">#003</th>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                        <th scope="row">#004</th>
+                                      </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    </div>
+</body>
+</html>
