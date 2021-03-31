@@ -1,189 +1,53 @@
-body{
+.container{
     font-family: 'Poppins', sans-serif;
-    background: #FAFAFA;
-    margin: 0 auto 0 auto;  
-    width:100%;
-    height: 100%; 
-    text-align:center;
-    margin: 20px 20px 0px 0px;   
-    margin-top:0px;
-  }
-  
-  .btn{
-    background:#FFFFFF;
-    width:100px;
-    padding:10px 0px;
-    color:#2A304A;
-    border-radius:7px;
-    border: #D8D8D8 1px solid;
-    
-    margin-top:30px;
-    margin-bottom:8px;
-    float:left;
-    margin-left:50px;
-    font-weight:800;
-    font-size:0.8em;
-    transition-duration: 0.2s;
-  }
-  .btn:hover {
-    background-color: 4166FF;
-    color: white;
-  }
-
-  .btn3{
-    background:#FFFFFF;
-    width:40px;
-    padding:10px 0px;
-    color:#2A304A;
-    border-radius:7px;
-    border: #D8D8D8 1px solid;
-    
-    margin-top:30px;
-    margin-bottom:8px;
-    float:left;
-    margin-left:10px;
-    font-weight:800;
-    font-size:0.8em;
-    transition-duration: 0.2s;
-  }
-  .btn3:hover {
-    background-color: 4166FF;
-    color: white;
-  }
-
-  .btn2{
-    background:#FFFFFF;
-    width:110px;
-    padding:10px 0px;
-    color:#2A304A;
-    border-radius:7px;
-    border: #D8D8D8 1px solid;
-    
-    margin-top:30px;
-    margin-bottom:8px;
-    float:left;
-    margin-left:10px;
-    font-weight:800;
-    font-size:0.8em;
-    transition-duration: 0.2s;
-  }
-  .btn2:hover {
-    background-color: 4166FF;
-    color: white;
-  }
-
-nav {
-    width: 200%;
-    display: flex;
-    position: float;
-    background-color: white;
-    z-index: 200;
-    
+	background-color: #E5E5E5;
+	min-height: 100%;
+	height: auto;
+    min-width: 100%;
+	width: auto;
 }
 
-nav a {
-    color: #fff;
-    margin: auto 20px auto 40px;
-    text-decoration: none;
-    font-weight: bold;
+.navbar{
+    font-family: 'Poppins', sans-serif;
+    height: 10%;
+
 }
 
-nav li {
-    float: left;
-    list-style: none;   
-    margin-left: 20px;
+.btn{
+color: #9799A1;
+background-color: white;
+border-radius:7px;
+border: #D8D8D8 1px solid;
+font-size:0.8em;
+transition-duration: 0.2s;
+
+}
+.btn:hover {
+    background-color: 4166FF;
+    color: white;
 }
 
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
+.boxbd {
+	background-color: #ca1818;
+    margin-top: 56%;
+	min-height: 30%;
+	height: auto;
+    min-width: 30%;
+	width: auto;
     }
 
-.box {
-    width: 1500px;
-    height: 800px;
-    background: #FAFAFA;
-    border-radius:12px;
+.thead{
+    background-color: #E5E5E5;
+    min-height: 30%;
+	height: auto;
+    min-width: 30%;
+	width: auto;
+}
+
+.boxbd {
+    width: 80%;
+    height: 60%;
+    background: white;
     border: #D8D8D8 1px solid;
+    margin-top: 0px;
     }
-
-    navbox {
-        width: 100%;
-        display: flex;
-        position: float;
-        background-color:  white;
-        z-index: 100;
-        height: 90px;
-        border-radius:12px 12px 0 0;
-        border: #D8D8D8 1px solid;
-    }
-    
-    navbox a {
-        color: black;
-        margin: auto 20px auto 40px;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    
-    navbox ul {
-        float: left;
-        list-style: none;   
-        margin-left: -50px;
-        margin-top: -15px;
-    }
-
-    .btn4{
-      background:#FFFFFF;
-      width:110px;
-      padding:10px 0px;
-      color:#9799A1;
-      border-radius:7px;
-      border: #D8D8D8 1px solid;
-      
-      margin-top:40px;
-      margin-bottom:8px;
-      float:left;
-      margin-left:50px;
-      font-weight:800;
-      font-size:1em;
-      transition-duration: 0.2s;
-    }
-    .btn4:hover {
-      background-color: 4166FF;
-      color: white;
-    }
-
-    .btn5{
-      background:#FFFFFF;
-      width:160px;
-      padding:10px 0px;
-      color:#9799A1;
-      border-radius:7px;
-      border: #D8D8D8 1px solid;
-      
-      margin-top:40px;
-      margin-bottom:8px;
-      float:left;
-      margin-left:20px;
-      font-weight:800;
-      font-size:1em;
-      transition-duration: 0.2s;
-    }
-    .btn5:hover {
-      background-color: 4166FF;
-      color: white;
-    }
-    
-    .boxbd {
-      width: 1500px;
-      height: 800px;
-      background: white;
-      border: #D8D8D8 1px solid;
-      margin-top: 70px;
-      }
-
-     
