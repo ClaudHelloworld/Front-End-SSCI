@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Dashboard-Page-SSCI</title>
+  <!--Importes CSS/BootStrap 4.0-->
     <link rel="stylesheet" type="text/css" href="../cssReset/reset.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,7 +16,7 @@
 <header>
     <nav class="navbar navbar-light bg-white">
         <form class="form-inline">
-             <a href="../dashboard/dashboard.html" type="submit" class="btn">Pedidos</a>
+             <a href="../dashboard/dashboard.html" type="submit" class="btn" style="position: relative;">Pedidos</a>
               <a href="../dashboard2/dashboard2.html" type="submit" class="btn">Cardápio</a>
             <button type="button" class="btn">Icon</button>
         </form>
@@ -25,122 +26,124 @@
 <body>
     <div class="container">                       
             <!--Campo para Banco de Dados-->
+
             <div class="d-flex justify-content-center">
             <div class="boxbd">
 
-                <nav class="navbar">
-                <form class="form-inline">
-
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" id="dropdowndata" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Categoria.
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdowndata">
-                          <a class="dropdown-item" href="#">Hoje</a>
-                          <a class="dropdown-item" href="#">Ultimo mês</a>
-                          <a class="dropdown-item" href="#">Ultima semana</a>
-                        </div>
-                      </div>                    
-                </form>
-
-                <!--Modal Cadastrar Categoria-->
-                
-                <button type="button" style="margin-left: 70%;" class="btn btn-primary" data-toggle="modal" data-target="#modalCategoria" data-whatever="@getbootstrap">Categoria +</button>
-                <div class="modal fade" id="modalCategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" style=" display: block;
-                        margin-left: 150px;
-                        margin-right: auto" id=exampleModalLabel>Cadastrar Categoria</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form>
-            
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Nome">
-                          </div>
-            
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Valor">
-                 
-                          </div>
-                          <div class="form-group">
-                            <textarea class="form-control" id="message-text" placeholder="Descrição"></textarea>
-                          </div>
-            
-                        </form>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Salvar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--Fim Modal Cadastrar Categoria-->
-                
-                <!--Modal Cadastrar Produto-->
-              <!--  <button class="btn dropdown-toggle" type="button" id="dropdownproduto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                              
-                Produto+</button> 
-                Excluir Modal-->
-
-              <!--  <div class="dropdown-menu"  aria-labelledby="dropdownproduto"> -->
-                  <button class="btn" type="button" data-toggle="modal" data-target="#modalProduto" type="button">Produto</button>                                  
-              <!-- </div> -->
-                <div class="modal fade" id="modalProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" style=" display: block;
-                        margin-left: 150px;
-                        margin-right: auto" id=exampleModalLabel>Cadastrar Produto</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form>
-            
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Nome">
-                          </div>
-            
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="recipient-name"  style="width: 48%;" placeholder="Valor">
-            
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle" style="margin-left: 50%; margin-top: -8%; width: 48%; text-align: left;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Categoria
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <a class="dropdown-item" href="#"></a>
-                                  <a class="dropdown-item" href="#"></a>
-                                  <a class="dropdown-item" href="#"></a>
-                                </div>
-                              </div> 
-            
-                          </div>
-                          <div class="form-group">
-                            <textarea class="form-control" id="message-text" placeholder="Descrição"></textarea>
-                          </div>
-            
-                        </form>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Salvar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                </nav>
-
                 <!--Inicio Tabelas-->
+                <div class="box">
+
+                  <nav class="navbar">
+                    <form class="form-inline">
+    
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdowndata" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="border-radius:7px;
+                            border: #D8D8D8 1px solid; color:#9799A1">
+                              Categoria
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdowndata">
+                              <a class="dropdown-item" href="#">Hoje</a>
+                              <a class="dropdown-item" href="#">Ultimo mês</a>
+                              <a class="dropdown-item" href="#">Ultima semana</a>
+                            </div>
+                          </div>                    
+                    
+    
+                    <!-- Fim Campo para Banco de Dados-->
+    
+                    <!--Modal Cadastrar Categoria-->
+                    
+                    <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#modalCategoria" data-whatever="@getbootstrap">Categoria +</button>
+                    <div class="modal fade" id="modalCategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" style=" display: block;
+                            margin-left: 150px;
+                            margin-right: auto" id=exampleModalLabel>Cadastrar Categoria</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body" >
+                            <form>    
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="recipient-name" placeholder="Nome" style="width: 100%;">
+                              </div>
+                              <br>
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="recipient-name" placeholder="Valor" style="width: 100%;">
+                              </div>
+                              <br>
+                              <div class="form-group">
+                                <textarea class="form-control" id="message-text" placeholder="Descrição" style="width: 100%;"></textarea>
+                              </div>
+                          </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary">Salvar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <!--Fim Modal Cadastrar Categoria-->
+    
+                      <!--Modal Cadastrar Produto-->
+                      <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalProduto" type="button">Produto +</button>  
+                                                       
+                    <div class="modal fade" id="modalProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" style=" display: block;
+                            margin-left: 150px;
+                            margin-right: auto" id=exampleModalLabel>Cadastrar Produto</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="recipient-name" placeholder="Nome">
+                              </div>
+                
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="recipient-name"  style="width: 48%;" placeholder="Valor">
+                
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" style="margin-left: 50%; margin-top: -8%; width: 48%;" type="button" id="categoriaproduto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Categoria
+                                    </button>
+                                    <div class="dropdown-menu" style="margin-left: 50%;" aria-labelledby="categoriaproduto">
+                                      <a class="dropdown-item" href="#">pizza</a>
+                                      <a class="dropdown-item" href="#">coxinha</a>
+                                      <a class="dropdown-item" href="#">doce</a>
+                                    </div>
+                                  </div> 
+                
+                              </div>
+                              <div class="form-group">
+                                <textarea class="form-control" id="message-text" placeholder="Descrição"></textarea>
+                              </div>
+                
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary">Salvar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Fim modal cadastrar produtos-->
+                  </form>
+                    </nav>
+
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="table-responsive">
@@ -167,7 +170,8 @@
                                           </button>
                                           <!--Excluir Modal-->
                                           <div class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
-                                            <button class="dropdown-item btn" type="button" data-toggle="modal" data-target="#modalExcluir" type="button">Excluir</button>                                  
+                                            <button class="dropdown-item btn" type="button" data-toggle="modal" data-target="#modalExcluir" type="button">Excluir</button>
+                                            <button class="dropdown-item btn" type="button" data-toggle="modal" data-target="#modalDetalhes" type="button">Detalhes</button>                                   
                                           </div> 
                                           <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
@@ -189,7 +193,52 @@
                                             </div>
                                           </div>
                                           <!--ExcluirModalFim-->
+                                          <!--Detalhes do Produto Modal-->
+                                          <div class="modal fade" id="modalDetalhes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                              <div class="modal-content" >
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalLabel" style="text-align: left;">Nome do Produto<br><p style="font-size: 14px;">valor do produto: R$12,00</p></h5>
+                                                  <br>
+                                                  <div class="boxdescricao">
+                                                 <!--
+                                                   
+                                                    -->
+                                                  </div>                                                                                   
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <b>Categoria:<a>??</a></b>
+                                                  <br>
+                                                 <b>Complementos</b>
+                                                <br>
+                                                 <div class="row">
+                                                  <div class="col-sm-12">
+                                                      <div class="table-responsive">
+                                                          <table class="table">                                                                  
+                                                                  <tbody>
+                                                                    <tr>
+                                                                      <td></td>
+                                                                      <th scope="row">#001</th>
+                                                                      <td></td>
+                                                                      <td>R$ 8,90</td>                                                                                                               
+                                                                      </tbody>
+                                                                      </table>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                                                  <button type="button" class="btn btn-warning">Excluir</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                       </div>
                                         </td>
+                                        <!--Definições do item-->
 
                                       </tr>
                                       <tr>
@@ -208,9 +257,8 @@
                         </div>
                     </div>
                 </div>
+              </div>
             </div>
         </div> 
-    </div>
-    </div>
 </body>
 </html>

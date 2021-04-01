@@ -13,7 +13,7 @@
 </head>
 
 <header>
-    <nav class="navbar navbar-light bg-white">
+    <nav class="navbar navbar-light bg-white navbar1">
         <form class="form-inline">
             <a href="../dashboard/dashboard.html" type="submit" class="btn">Pedidos</a>
             <a href="../dashboard2/dashboard2.html" type="submit" class="btn">Cardápio</a>
@@ -28,33 +28,35 @@
             <div class="d-flex justify-content-center">
             <div class="boxbd">
 
-                <nav class="navbar">
-                <form class="form-inline">
+              <!--NavBAR-->
 
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Mostrar como
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Hoje</a>
-                          <a class="dropdown-item" href="#">Ultimo mês</a>
-                          <a class="dropdown-item" href="#">Ultima semana</a>
-                        </div>
-                      </div>
-
-                      <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Ultimos Pedidos
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Pedidos Completos</a>
-                          <a class="dropdown-item" href="#">Pedidos Em espera</a>
-                        </div>
-                      </div>
-                    
-            
-                </form>
-                </nav>
+                  <!--Tabela-->
+                  <div class="box" >
+                    <nav class="navbar navbar2">
+                      <form class="form-inline">
+      
+                          <div class="dropdown">
+                              <button style="border: #D8D8D8 1px solid; color:#9799A1; margin-left: 11%;" class="btn dropdown-toggle"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Mostrar como
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Hoje</a>
+                                <a class="dropdown-item" href="#">Ultimo mês</a>
+                                <a class="dropdown-item" href="#">Ultima semana</a>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="dropdown">
+                              <button class="btn dropdown-toggle"  style="border: #D8D8D8 1px solid; color:#9799A1; margin-left: 10%;"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Ultimos Pedidos
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Pedidos Completos</a>
+                                <a class="dropdown-item" href="#">Pedidos Em espera</a>
+                              </div>
+                            </div>
+                      </form>
+                      </nav>
 
                 <div class="row">
                     <div class="col-sm-12">
@@ -74,7 +76,60 @@
                                         <th scope="row">#001</th>
                                         <td>pizza</td>
                                         <td>pizza</td>
-                                        <td>pizza</td>
+                                      <!--Detalhes do Pedido Modal-->
+                                        <td>
+                                          <button class="btn dropdown-toggle" style="margin-left: 60%;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                              
+                                          </button>
+                                          
+                                          <div class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
+                                            <button class="dropdown-item btn" type="button" data-toggle="modal" data-target="#modalExcluir" type="button">???</button>
+                                            <button class="dropdown-item btn" type="button" data-toggle="modal" data-target="#modalDetalhes" type="button">Detalhes</button>                                   
+                                          </div> 
+                                          <div class="modal fade" id="modalDetalhes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                              <div class="modal-content" >
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalLabel" style="text-align: left;">Nome do Produto<br><p style="font-size: 14px;">valor do produto: R$12,00</p></h5>
+                                                  <br>
+                                                  <div class="boxdescricao">
+                                                 <!--
+                                                   
+                                                    -->
+                                                  </div>                                                                                   
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <b>Categoria:<a>??</a></b>
+                                                  <br>
+                                                 <b>Complementos</b>
+                                                <br>
+                                                 <div class="row">
+                                                  <div class="col-sm-12">
+                                                      <div class="table-responsive">
+                                                          <table class="table">                                                                  
+                                                                  <tbody>
+                                                                    <tr>
+                                                                      <td></td>
+                                                                      <th scope="row">#001</th>
+                                                                      <td>borda especial</td>
+                                                                      <td>R$ 8,90</td>                                                                                                               
+                                                                      </tbody>
+                                                                      </table>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                                                  <button type="button" class="btn btn-warning">Excluir</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                       </div>
+                                        </td>
+                                      <!-- Fim Modal Detalhes-->
                                       </tr>
                                       <tr>
                                         <td></td>
@@ -101,9 +156,8 @@
                         </div>
                     </div>
                 </div>
+              </div>
             </div>
         </div> 
-    </div>
-    </div>
 </body>
 </html>
