@@ -54,7 +54,7 @@
     
                     <!--Modal Cadastrar Categoria-->
                     
-                    <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#modalCategoria" data-whatever="@getbootstrap">Categoria +</button>
+                    <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#modalCategoria">Categoria +</button>
                     <div class="modal fade" id="modalCategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -91,10 +91,20 @@
     
                     <!--Fim Modal Cadastrar Categoria-->
     
-                      <!--Modal Cadastrar Produto-->
-                      <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalProduto" type="button">Produto +</button>  
-                                                       
-                    <div class="modal fade" id="modalProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <!--DropDown Produto-->
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Produto+
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <button class="dropdown-item" type="button" data-toggle="modal" data-target="#modalCadastrarProduto">Cadastrar Produto</button>
+                          <button class="dropdown-item" type="button" data-toggle="modal" data-target="#modalAtualizarProduto">Atualizar produto</button>                        
+                        </div>
+                      </div>
+
+                     <!--Modal Cadastrar Produto-->
+
+                     <div class="modal fade" id="modalCadastrarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -129,9 +139,24 @@
                               </div>
                               <div class="form-group">
                                 <textarea class="form-control" id="message-text" placeholder="Descrição"></textarea>
-                              </div>
-                
+                              </div>             
                             </form>
+                             <!--TabelaModalAtualizarProduto-->
+                            <h5 style="font-size: 13px;">Complementos</h5>
+                            <div class="col-sm-12">
+                              <div class="table-responsive">
+                                  <table class="table">                                                                  
+                                          <tbody>
+                                            <tr>
+                                              <td></td>
+                                              <th scope="row">#001</th>
+                                              <td>borda especial</td>
+                                              <td>R$ 8,90</td> 
+                                              <td><button style="margin-top: -10%;" type="button" class="btn btn-primary">+</button></td>                                                                                                              
+                                              </tbody>
+                                              </table>
+                              </div>
+                          </div>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -140,7 +165,74 @@
                         </div>
                       </div>
                     </div>
+                  
                     <!--Fim modal cadastrar produtos-->
+
+                    <!-- modal atualizar produtos-->
+                    <div class="modal fade" id="modalAtualizarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" style=" display: block;
+                            margin-left: 150px;
+                            margin-right: auto" id=exampleModalLabel>Atualizar Produto</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="recipient-name" placeholder="Nome">
+                              </div>
+                
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="recipient-name"  style="width: 48%;" placeholder="Valor">
+                
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" style="margin-left: 50%; margin-top: -8%; width: 48%;" type="button" id="categoriaproduto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Categoria
+                                    </button>
+                                    <div class="dropdown-menu" style="margin-left: 50%;" aria-labelledby="categoriaproduto">
+                                      <a class="dropdown-item" href="#">pizza</a>
+                                      <a class="dropdown-item" href="#">coxinha</a>
+                                      <a class="dropdown-item" href="#">doce</a>
+                                    </div>
+                                  </div> 
+                
+                              </div>
+                              <div class="form-group">
+                                <textarea class="form-control" id="message-text" placeholder="Descrição"></textarea>
+                              </div>             
+                            </form>
+                             <!--TabelaModalAtualizarProduto-->
+                            <h5 style="font-size: 13px;">Complementos</h5>
+                            <div class="col-sm-12">
+                              <div class="table-responsive">
+                                  <table class="table">                                                                  
+                                          <tbody>
+                                            <tr>
+                                              <td></td>
+                                              <th scope="row">#001</th>
+                                              <td>borda especial</td>
+                                              <td>R$ 8,90</td> 
+                                              <td><button style="margin-top: -10%;" type="button" class="btn btn-primary">+</button></td>                                                                                                               
+                                              </tbody>
+                                              </table>
+                              </div>
+                          </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary">Salvar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                          
+                    <!--Fim modal atualizar produtos-->
+
                   </form>
                     </nav>
 
@@ -201,9 +293,7 @@
                                                   <h5 class="modal-title" id="exampleModalLabel" style="text-align: left;">Nome do Produto<br><p style="font-size: 14px;">valor do produto: R$12,00</p></h5>
                                                   <br>
                                                   <div class="boxdescricao">
-                                                 <!--
-                                                   
-                                                    -->
+                     
                                                   </div>                                                                                   
                                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
